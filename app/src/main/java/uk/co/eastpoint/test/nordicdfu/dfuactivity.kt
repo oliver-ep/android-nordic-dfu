@@ -321,6 +321,7 @@ class dfuactivity : AppCompatActivity() {
         starter.setZip(fileStreamUri!!) // can use filpath if prefered
 
         Log.i(TAG,"Starting DFU process")
+        // -- NOTE: Make sure the app has BLE and Location permission
         starter.start(this, DfuService::class.java)
         Log.i(TAG,"DFU process started successfully")
 
