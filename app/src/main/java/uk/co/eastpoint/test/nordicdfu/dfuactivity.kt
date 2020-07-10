@@ -20,7 +20,7 @@ import java.io.File
 class dfuactivity : AppCompatActivity() {
 
     //region Members
-    private var TAG : String  = "dfactivity"
+    private var TAG : String  = "dfuactivity"
     private val deviceId : String = "E2:83:BD:2F:9B:57" // hard code
     private var firmwarePath : String? = null
     private var fileStreamUri : Uri? = null
@@ -321,7 +321,7 @@ class dfuactivity : AppCompatActivity() {
         starter.setZip(fileStreamUri!!) // can use filpath if prefered
 
         Log.i(TAG,"Starting DFU process")
-        val controller = starter.start(this, DfuService::class.java)
+        starter.start(this, DfuService::class.java)
         Log.i(TAG,"DFU process started successfully")
 
     }
